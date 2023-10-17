@@ -1,0 +1,27 @@
+{
+  "name": "dominando-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "sequelize-cli": "^6.6.1",
+    "sucrase": "^3.34.0"
+  },
+  "scripts": {
+    "dev": "nodemon ./src/server.js"
+  }
+}
