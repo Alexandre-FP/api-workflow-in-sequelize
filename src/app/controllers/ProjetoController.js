@@ -23,19 +23,19 @@ class ProjetoControllers {
       error.statusCode = 409;
       return next(error);
     }
-
+ 
     const projetoGerado = await Projeto.create({ 
        ...body, usuario_id: token.id ,
     });
 
 
-    // await Etapa.create({
-    //     observacao: "Projeto aberto",
-    //     usuario_id: token.id,
-    //     departamento_id: token.departamento_id,
-    //     statu_id: 1,
-    //     projeto_id: projetoGerado.id,
-    // }); 
+    await Etapa.create({
+        observacao: "Projeto aberto",
+        usuario_id: token.id,
+        departamento_id: token.departamento_id,
+        statu_id: 1,
+        projeto_id: projetoGerado.id,
+    }); 
 
     const result = await Projeto.findOne({
       where: {
